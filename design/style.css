@@ -1,0 +1,118 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+body {
+   font-size: 15px;
+   font-family: 'Poppins', sans-serif;
+}
+:root {
+   /* Primary */
+   --red: hsl(0, 78%, 62%);
+   --cyan: hsl(180, 62%, 55%);
+   --orange: hsl(34, 97%, 64%);
+   --blue: hsl(212, 86%, 64%);
+   /* Neutral */
+   --very-dark-blue: hsl(234, 12%, 34%);
+   --grayish-blue: hsl(229, 6%, 66%);
+   --very-light-gray: hsl(0, 16%, 77%);
+}
+h1, h2 {
+   color: var(--very-dark-blue);
+   padding: var(--grayish-blue);
+}
+.container {
+   width: 80%;
+   height: 80%;
+   display: flex;
+   flex-direction: column;
+   margin: 70px auto;
+}
+.container div {
+   width: 100%;
+}
+.container .up {
+   margin-bottom: 60px;
+   text-align: center;
+}
+.container .up h1 {
+   color: var(--very-dark-blue);
+}
+.container .up h1:first-of-type {
+   font-weight: normal;
+}
+.container .up h1:nth-of-type(2) {
+   margin: 10px 0;
+   font-size: 33px;
+}
+@media (max-width: 767px) {
+   .container .up h1:first-of-type {
+      font-size: 25px;
+   }
+   .container .up h1:nth-of-type(2) {
+      font-size: 26px;
+   }
+}
+.container .up p {
+   color: var(--grayish-blue);
+}
+.container .down {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+@media (max-width: 767px) {
+   .container .down {
+      flex-direction: column;
+   }
+}
+.container .down .l,
+.container .down .m,
+.container .down .r {
+   width: calc(92% / 3);
+}
+@media (max-width: 767px) {
+   .container .down .l,
+   .container .down .m,
+   .container .down .r {
+      width: 100%;
+   }
+}
+.container .down .l .card {
+   border-top: 5px solid var(--cyan);
+}
+.container .down .m {
+   display: flex;
+   flex-direction: column;
+}
+.container .down .m .card:first-child {
+   margin-bottom: 30px;
+   border-top: 5px solid var(--red);
+}
+@media (max-width: 767px) {
+   .container .down .card {
+      margin-bottom: 40px;
+   }
+   .container .down {
+      margin-bottom: -50px;
+   }
+}
+.container .down .card {
+   height: 240px;
+   box-shadow: 0 10px 25px 0 var(--grayish-blue);
+   padding: 25px;
+   border-radius: 5px;
+   position: relative;
+}
+.container .down .card img {
+   position: absolute;
+   right: 20px;
+   bottom: 20px;
+}
+.container .down .m .card:nth-child(2) {
+   border-top: 5px solid var(--orange);
+}
+.container .down .r .card {
+   border-top: 5px solid var(--blue);
+}
